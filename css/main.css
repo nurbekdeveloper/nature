@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/*Variables*/
+:root {
+    --main-color: #721736;
+    --second-color: #ccb9bc;
+    --details: #F08080;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Navbar*/
+.navbar-brand{
+     font-size: 28px;
+}
+
+.nav-link{
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    color: #fff !important;
+}
+
+.navbar-toggler{
+    outline: none !important;
+}
+
+.bg-black{
+    background-color: var(--main-color);
+}
+
+.carousel-item{
+    height: 600px;
+}
+
+.carousel-image-1{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)), url(https://daryo.uz/cache/2019/07/photo_2019-07-15_10-34-48-1250x750.jpg);
+    background-size: cover;
+}
+
+.carousel-image-2{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)), url(https://github.com/Miriali/NurseryWebsite/blob/master/img/main-2.jpg?raw=true);
+    background-size: cover;
+}
+
+.carousel-image-3{
+    background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.4)), url(https://github.com/Miriali/NurseryWebsite/blob/master/img/main-3.jpg?raw=true);
+    background-size: cover;
+}
+
+.title-color{
+    color: #fff;
+}
+
+.btn-color {
+    background: var(--details);
+    color: #fff;
+}
+
+.btn-color:hover{
+    color: #111;
+    transition: .4s;
+}
+
+@keyframes slide-btn{
+    16%{transform: translateY(8px)};
+    33%{transform: translateY(-6px)};
+    50%{transform: translateY(4px)};
+    65%{transform: translateY(-2px)};
+    85%{transform: translateY(-1px)};
+    100%{transform: translateY(0)};
+}
+
+.slide-btn:hover,
+.slide-btn:focus,
+.slide-btn:active{
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+/*About*/
+.fab{
+    color: #DAA520;
+    font-size: 3rem;
+    padding: .8rem;
+    transition: .5s;
+  }
+  
+.fab:hover {
+      transform: translateY(-10px);
+}
+
+/*Products*/
+#products{
+    background-color: #111;
+}
+
+.product-title{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.single-item{
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 1px 5px #fff, 0 1px 1px #fff;
+    position: relative;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer;
+}
+
+.single-item:hover,
+.single-item:focus,
+.single-item:active{
+    transform: translateY(-5px);
+}
+
+.single-item:hover:before,
+.single-item:focus:hover,
+.single-item:active:before{
+    opacity: 1;
+    transform: translateY(5px);
+}
+
+.img-container{
+    position: relative;
+    cursor: pointer;
+}
+
+.img-fruts{
+    height: 231px;
+}
+
+.img-container:before{
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px #111;
+    transition-duration: 0.3s;
+    transition-property: box-shadow, transform;
+}
+
+.img-container:hover,
+.product-img:focus,
+.product-img:active{
+    box-shadow: -1px 0px 4px 1px rgba(247, 243, 243, 0.9);
+    transform: scale(1.1);
+}
+
+span {
+    color: var(--details);
+    font-weight: 700;
+}
+
+/*Blog*/
+#blog-sec{
+    margin-top: 25px;
+}
+
+.text-color{
+    color: #000;
+}
+
+.flower-about{
+    margin-top: 35px;
+    animation-name: imgLeft;
+    animation-duration: 3s;
+}
+
+.about-text{
+    animation-name: textRight;
+    animation-duration: 3s;
+}
+
+@keyframes imgLeft {
+    0%{
+        transform: translateX(-120px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes textRight{
+    0%{
+        transform: translateX(30px);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/*Best Seller*/
+.seller{
+    background-color: #111;
+    color: #fff;
+    margin-top: 30px;
+    box-shadow: 0 1px 5px #fff, 0 1px 1px #fff;
+}
+
+.img-top{
+    margin-top: 10px;
+}
+
+.seller-item{
+    text-align: right;
+    font-size: 20px;
+}
+
+.seller-item p{
+    position: absolute;
+    right: 30px;
+    left: 30px;
+    padding: 10px 0;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.35s, transform 0.35s;
+    bottom: 30px;
+    line-height: 1.5;
+    transform: translate3d(0, 100%, 0);
+}
+
+.seller-item:hover p{
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.photo{
+    height: 800px;
+}
+
+.seller-img{
+    height: 380px;
+    width: 100%;
+    margin-bottom: 1px;
+}
+
+/*Contact*/
+@keyframes cont-btn{
+    16%{transform: translateY(8px)};
+    33%{transform: translateY(-6px)};
+    50%{transform: translateY(4px)};
+    65%{transform: translateY(-2px)};
+    85%{transform: translateY(-1px)};
+    100%{transform: translateY(0)};
+}
+
+.cont-btn:hover,
+.cont-btn:focus,
+.cont-btn:active{
+    animation-name: slide-btn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+/*Footer*/
+.social-section{
+    background-color: #111;
+    color: #fff;
+}
+
+.social-icon{
+    transition: transform 0.4s ease-out;
+    padding: .8rem;
+}
+
+.social-icon:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+
+/*Media*/
+@media (min-width: 768px) {
+.flower-about{
+    margin-bottom: 35px;
+}
+   
+.product-title{
+    margin-bottom: 35px;
+}
+
+.seller-item{
+    font-size: 18px;
+}
+}
+
+@media (min-width: 425px) {
+.flower-about{
+    margin-bottom: 35px;
+}
+        
+.photo, .seller-img {
+    margin-bottom: 20px;
+}
+
+.social-icon{
+font-size: 40px;
+}
+}
+
+@media (min-width: 375px){
+.flower-about{
+    margin-bottom: 30px;
+}
+                
+.photo, .seller-img {
+    margin-bottom: 20px;
+}
+        
+.social-icon{
+    font-size: 35px;
+}
+}
+
+@media (min-width: 320px) {
+.flower-about{
+    margin-bottom: 30px;
+}                
+
+.photo, .seller-img {
+    margin-bottom: 20px;
+}
+            
+.social-icon{
+    font-size: 30px;
+}
+}
